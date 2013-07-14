@@ -1,0 +1,19 @@
+<h2>More information on <%= @movie.name %></h2>
+
+<h4>Year: <%= @movie.year %></h4>
+
+<h4>Plot: <%= @movie.plot %></h4>
+
+<h4>Rated: <%= @movie.mpaa%></h4>
+
+Current Rating: <%= @movie.rating %><br>
+<%= button_to "+", movies_rate_up_path%>
+<%= button_to "-", movies_rate_down_path%>
+
+
+
+
+<%= link_to "Search", root_path %><br>
+
+<%= link_to "See all saved and favorite movies", movies_all_path %>
+

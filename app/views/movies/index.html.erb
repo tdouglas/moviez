@@ -1,0 +1,21 @@
+<h3>Here are all of your saved movies.</h3>
+
+<ul>
+    <% @movies.each do |movie| %>
+      <% if movie.rating < 100 %>
+      <li><%= link_to movie.name, movies_show_path(movie.id) %></li>
+      <% end %>
+    <% end %>
+</ul>
+
+#add functionality that allows you to delete OR move to favorites
+
+<h3>Here are all of your favorite movies.</h3>
+<ul>
+    <% @movies.each do |movie| %>
+      <% if movie.rating == 100 %>
+      <li><%= link_to movie.name, movies_show_path(movie.id) %></li>
+      <% end %>
+    <% end %>
+</ul>
+

@@ -1,0 +1,6 @@
+
+<% @query.each do |movie| %>
+<ol>
+  <li><%= link_to movie.title, movies_details_path(movie.id) %></li>
+</ol>
+<%end%>

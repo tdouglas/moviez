@@ -1,0 +1,20 @@
+<h2>More information on <%= @movie.title %></h2>
+
+<h4>Year: <%= @movie.year %></h4>
+
+<h4>Plot: <%= @movie.plot %></h4>
+
+<h4>Rated: <%= @movie.mpaa_rating %></h4>
+
+<img src ="<%= @movie.poster %>"/>
+
+<h5>
+  <%= button_to "Save Movie",
+      movies_save_path(@movie.id) %>
+</h5>
+
+<h5>
+  <%= button_to "Fave Movie",
+      movies_fave_path(@movie.id) %>
+</h5>
+
